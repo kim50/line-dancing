@@ -12,7 +12,7 @@
 			body {
 			  margin: 0;
 			  overflow: hidden;
- 			 
+ 			  background: black;
 			}
 
 
@@ -31,43 +31,99 @@
 				
 				}
 
-			.square{width:240px;float:left;}
-
-			.list {list-style-type:none;
-					margin: 10px;
-					color: white;
-					font-family: Helvetica;
-					font-size: 15px;
-					font-weight: 700;
-					line-height: 22px;
+		.list {list-style-type:none;
+				margin: 10px;
+				font-family: Helvetica;
+				font-size: 15px;
+				font-weight: 700;
+			
+				line-height: 22px;
 				}
 
-			a:visited {
-			    color: white;
-			    background-color: transparent;
-			    text-decoration: none;
-			}
+		a:visited {
+		    color: white;
+		    background-color: transparent;
+		    text-decoration: none;
+		}
 
-			a:link {
-			    color: black;
-			    background-color: transparent;
-			    text-decoration: none;
-			}
+		a:link {
+		    color: white;
+		    background-color: transparent;
+		    text-decoration: none;
+		}
 
-			a:hover {color: blue;}
-			
-			a:active {
-			    color: white;
-			    background-color: transparent;
-			    text-decoration: none;
-			}
+		a:hover {color: blue;}
 
-			#particles {
-			  width: 100vw;
-			  height: 100vh;
-			  background-color: black;
-			  margin: 0;
-			}
+		.dropdown:hover .dropdown-content {
+		    display: block;
+		}
+
+		.dropdown-content a:hover {color: blue;}
+		
+		.dropdown-content a {
+		    color: black;
+		    padding: 12px 16px;
+		    text-decoration: none;
+		    display: block;
+		}
+
+		a:active {
+		    color: white;
+		    background-color: transparent;
+		    text-decoration: none;
+		}
+
+		#container {font-size: 110px;
+					font-family: 'Black Han Sans', sans-serif;
+					line-height: 120px;
+					}
+
+		@keyframes rotate{
+			from{transform: rotate(0deg)}
+			to{transform: rotate(360deg)}
+		}
+
+		.footer {
+		   height: 70px; 
+		   left: 0;
+		   bottom: 0;
+		   width: 100%;
+
+		   text-align: right;
+		}
+
+		.p1 {
+		   font-family: Helvetica;
+		   font-weight: 500;
+		   margin-right: 10px;
+		}
+
+		.dropbtn {
+			list-style-type:none;
+			font-family: Helvetica;
+			font-size: 15px;
+			font-weight: 700;
+			line-height: 22px;
+		    border: none;
+		    cursor: pointer;
+		    padding: 0px;
+		    background: black;
+		}
+
+		.dropdown {
+		    position: relative;
+		    display: inline-block;
+		}
+
+		.dropdown-content {
+		    display: none;
+		    position: relative;
+		    background-color: #f9f9f9;
+		    min-width: 160px;
+		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		    z-index: 1;
+		    margin-bottom: 10px;
+		}
 
 	</style>
 </head>
@@ -76,9 +132,20 @@
 		<div class="listBox square">
 			<div class="list">
 			  <li><a href="https://kim50.github.io/kim50_home/">HOME</a></li>
-			  <li>ABOUT ME</li>
-			  <li>CODING</li>
-			  <li>POSTER</li>
+			  <li><a href="#home">ABOUT ME</a></li>
+			
+			   <div class="dropdown">
+				    <button class="dropbtn"><a href="https://kim50.github.io/kim50_home/">CODING</a> 
+				      <i class="fa fa-caret-down"></i>
+				    </button>
+				    <div class="dropdown-content">
+				      <a href="https://kim50.github.io/line-dancing/">#1. Line Dancing</a>
+				      <a href="https://kim50.github.io/angry_chihuahua/">#2. ANGRY Chihuahua</a>
+				      <a href="#">Link 3</a>
+				    </div>
+				  </div> 
+
+			  <li><a href="#home">POSTER</a></li>
 			</div>  
 		</div>
 	<div id="particles">
